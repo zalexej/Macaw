@@ -18,6 +18,7 @@ enum AnimationType {
     case morphing
     case shape
 	case empty
+    case path
 }
 
 class BasicAnimation: Animation {
