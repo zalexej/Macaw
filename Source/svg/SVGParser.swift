@@ -417,7 +417,7 @@ open class SVGParser {
              "linearGradient", "radialGradient", SVGKeys.fill:
             break
         default:
-            print("SVG parsing error. Shape \(element.name) not supported")
+//            print("SVG parsing error. Shape \(element.name) not supported")
             return .none
         }
 
@@ -1436,7 +1436,7 @@ open class SVGParser {
                     }
                 }
             default:
-                print("SVG parsing error. Filter \(element.name) not supported")
+//                print("SVG parsing error. Filter \(element.name) not supported")
                 continue
             }
 
@@ -1574,7 +1574,7 @@ open class SVGParser {
             if xScale == yScale {
                 r *= xScale
             } else {
-                print("SVG parsing error. No oval radial gradients supported")
+//                print("SVG parsing error. No oval radial gradients supported")
             }
 
             let point2 = CGPoint(x: fx, y: fy).applying(cgTransform)
@@ -1679,7 +1679,7 @@ open class SVGParser {
             case "px" :
                 return value
             default:
-                print("SVG parsing error. Unit \(unitString) not supported")
+//                print("SVG parsing error. Unit \(unitString) not supported")
                 return value
             }
         }
