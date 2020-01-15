@@ -134,6 +134,9 @@ class NodeRenderer {
 
         // draw masked image
         if let mask = node.mask, let bounds = mask.bounds {
+			if bounds == Rect.zero() {
+				return
+			}
             context.draw(getMaskedImage(bounds: bounds), in: bounds.toCG())
             return
         }

@@ -135,7 +135,7 @@ public extension CGAffineTransform {
 
 public extension Node {
 
-    func toNativeImage(size: Size, layout: ContentLayout = .of()) -> MImage {
+    func toNativeImage(size: Size, layout: ContentLayout = .of()) -> MImage? {
         let renderer = RenderUtils.createNodeRenderer(self, view: nil)
         let rect = size.rect()
 
@@ -149,7 +149,7 @@ public extension Node {
 
         let img = MGraphicsGetImageFromCurrentImageContext()
         MGraphicsEndImageContext()
-        return img!
+        return img
     }
 
 }
